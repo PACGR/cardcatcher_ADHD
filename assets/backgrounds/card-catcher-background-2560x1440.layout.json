@@ -1,0 +1,64 @@
+﻿{
+    "canvas":  {
+                   "width_px":  2560,
+                   "height_px":  1440,
+                   "psychopy_units":  "pix"
+               },
+    "background":  {
+                       "center_px":  [
+                                         0,
+                                         0
+                                     ],
+                       "size_px":  [
+                                       2560,
+                                       1440
+                                   ]
+                   },
+    "target_card":  {
+                        "center_from_top_left_px":  [
+                                                        490,
+                                                        648
+                                                    ],
+                        "psychopy_position_px":  [
+                                                     -790,
+                                                     72
+                                                 ],
+                        "size_px":  [
+                                        332,
+                                        464
+                                    ]
+                    },
+    "stimulus_card":  {
+                          "center_from_top_left_px":  [
+                                                          1280,
+                                                          671
+                                                      ],
+                          "psychopy_position_px":  [
+                                                       0,
+                                                       49
+                                                   ],
+                          "size_px":  [
+                                          420,
+                                          587
+                                      ]
+                      },
+    "progress_track":  {
+                           "top_left_px":  [
+                                               930,
+                                               92
+                                           ],
+                           "size_px":  [
+                                           700,
+                                           14
+                                       ],
+                           "psychopy_center_px":  [
+                                                      0,
+                                                      621
+                                                  ]
+                       },
+    "notes":  [
+                  "PsychoPy pix coordinates use the screen center as (0,0), with positive y upward.",
+                  "The Target card, trial stimulus card, progress fill, trial counters, and feedback remain dynamic overlays.",
+                  "The table, labels, empty slots, action guide, and collection pile are baked into the background."
+              ]
+}

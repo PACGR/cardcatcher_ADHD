@@ -1,0 +1,65 @@
+column_name	file_scope	data_type	unit	missing_rule	description
+subject	all	string		never	Participant numeric identifier
+session	all	string		never	Session identifier
+subject_type	all	string		never	Participant group prefix
+date	all	string		never	Session date-time label
+session_seed	all	integer		never	Randomization seed
+target_selection_mode	trials	string		never	Main-set selection protocol
+triplet_rank	trials	integer		never	Rank of the fixed main Target triplet
+counterbalance_cell_id	trials	integer		never	Six-cell Main set-context-order assignment
+practice_attempt	practice	integer		blank for Main	Practice attempt number from 1 to 3
+global_trial_index	trials	integer		never	Sequential index within the Practice or Main trial file
+block_index	trials	integer		never	Main Block A or B index; zero for Practice
+phase	trials	category		never	Practice, Block A, or Block B
+block_type	trials	category		never	Practice, Heavy-go, or Low-go
+block_trial_index	trials	integer		never	Sequential trial index within a block or attempt
+target_set	trials	string		never	Stimulus set containing the current reference Target
+target_pattern_id	trials	integer		never	Global 1-to-84 reference-pattern ID
+stimulus_pattern_id	trials	integer		never	Global 1-to-84 presented-pattern ID
+target_pattern	trials	string		never	Nine-bit reference pattern; import as text
+stimulus_pattern	trials	string		never	Nine-bit presented pattern; import as text
+stimulus_type	trials	category		never	Target, Near, or Far
+is_minority	trials	binary		never	One when the trial is a minority item in the scheduled stream
+dominant_run_index	main_trials	integer		blank for Practice	Dominant-run number preceding or containing the trial
+dominant_run_length	main_trials	integer		blank for Practice	Length of the scheduled dominant run
+position_in_dominant_run	main_trials	integer		blank for minority trials	Position within a dominant run
+response_required	trials	binary		never	One for Target trials
+responded	trials	binary		never	One when at least one in-window SPACE keydown was recorded
+space_held_at_onset	trials	binary		never	One when SPACE was already held as the stimulus appeared; excluded from primary analysis
+response_key	trials	string		blank when no response	Primary response key
+response_count	trials	integer		never	Number of in-window SPACE keydowns
+additional_space_count	trials	integer		never	SPACE keydowns after the primary response
+rt_ms	trials	float	ms	blank when no response	First keydown time from actual stimulus onset
+anticipatory	trials	binary		never	One when the first RT is below the premature threshold
+valid_for_primary	trials	binary		never	One when the trial is not anticipatory
+correct	trials	binary_nullable		blank when anticipatory	One for correct response or withholding; zero for error
+error_type	trials	category		never	Correct-go, omission, commission, correct-rejection, or anticipatory exclusion
+exclusion_reasons	trials	string		blank when not excluded	Reason the trial is excluded from primary analysis
+keydown_ms	trials	float	ms	blank when no response	Primary keydown from stimulus onset
+keyup_ms	trials	float	ms	blank when unavailable	Primary keyup from stimulus onset
+press_duration_ms	trials	float	ms	blank when unavailable	Primary SPACE press duration
+key_events	trials	JSON		blank when no response	Complete raw in-window SPACE key event list
+scheduled_stimulus_duration_ms	trials	float	ms	never	Configured stimulus duration
+actual_stimulus_duration_ms	trials	float	ms	never	Measured stimulus duration from actual flips
+response_window_ms	trials	float	ms	never	Configured response deadline from onset
+actual_trial_duration_ms	trials	float	ms	never	Measured response-period duration
+onset_session_ms	trials	float	ms	never	Stimulus onset from the session clock
+refresh_hz	trials	float	Hz	never	Measured or fallback display refresh rate
+stimulus_frames	trials	integer	frames	never	Configured stimulus frame count
+trial_frames	trials	integer	frames	never	Configured response-window frame count
+feedback_duration_ms	practice_trials	float	ms	blank for Main	Configured Practice feedback duration
+actual_cycle_duration_ms	practice_trials	float	ms	blank for Main	Measured Practice response-plus-feedback cycle
+image_path	trials	string		never	Presented image path relative to the project root
+practice_set_id	practice_summary	string		never	Set used in the practice attempt
+target_correct	practice_summary	integer	count	never	Correct Target responses
+target_total	practice_summary	integer	count	never	Number of Target trials
+nogo_correct	practice_summary	integer	count	never	Correct Near plus Far withholdings
+nogo_total	practice_summary	integer	count	never	Number of Near plus Far trials
+overall_correct	practice_summary	integer	count	never	Correct trials across all practice stimulus types
+overall_total	practice_summary	integer	count	never	Number of practice trials
+target_passed	practice_summary	binary		never	One when Target score is at least 4 of 5
+nogo_passed	practice_summary	binary		never	One when No-Go score is at least 8 of 10
+overall_passed	practice_summary	binary		never	One when total score is at least 12 of 15
+practice_passed	practice_summary	binary		never	One when all three practice thresholds are met
+advanced_to_main	practice_summary	binary		never	One when this attempt is followed by Main
+forced_proceed_after_max_attempts	practice_summary	binary		never	One when Main begins after a failed third attempt

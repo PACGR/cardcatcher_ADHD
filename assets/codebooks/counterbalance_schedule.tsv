@@ -1,0 +1,7 @@
+counterbalance_cell_id	heavy_set_id	low_set_id	first_block_type	block_a_set_id	block_a_type	block_b_set_id	block_b_type
+1	set05	set10	Heavy-go	set05	Heavy-go	set10	Low-go
+2	set10	set05	Low-go	set05	Low-go	set10	Heavy-go
+3	set05	set12	Low-go	set12	Low-go	set05	Heavy-go
+4	set12	set05	Heavy-go	set12	Heavy-go	set05	Low-go
+5	set10	set12	Heavy-go	set10	Heavy-go	set12	Low-go
+6	set12	set10	Low-go	set10	Low-go	set12	Heavy-go

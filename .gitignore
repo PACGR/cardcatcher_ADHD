@@ -1,0 +1,28 @@
+# Clinical / participant raw and derived research data (NEVER commit)
+/data/
+/analysis/output/
+
+# Local legacy snapshots, archived drafts, and temporary reference files
+/Legacy/
+/tmp/
+/tmp*/
+
+# Python bytecode & environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+
+# Editor, agent, and OS metadata
+.vscode/
+.idea/
+.agents/
+.codex/
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.bak

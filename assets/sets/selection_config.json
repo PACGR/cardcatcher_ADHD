@@ -1,0 +1,37 @@
+﻿{
+    "generated_at":  "2026-07-21T10:37:42.7371396+09:00",
+    "source_directory":  "C:\\ADHD_PRE\\assets\\card-combinations",
+    "output_directory":  "C:\\ADHD_PRE\\assets\\sets",
+    "source_pattern_count":  84,
+    "d4_class_count":  16,
+    "target_mode":  "D4Representatives",
+    "set_count":  16,
+    "seed":  20260721,
+    "target_patterns":  [
+                            "001001001",
+                            "011001000",
+                            "011000001",
+                            "000100011",
+                            "100110000",
+                            "000010101",
+                            "010011000",
+                            "000110001",
+                            "010000110",
+                            "010001010",
+                            "010010010",
+                            "001000101",
+                            "100001001",
+                            "001010100",
+                            "100001100",
+                            "010100001"
+                        ],
+    "near_rule":  "fixed_hamming=2 and d4_min_distance=2",
+    "far_rule":  "fixed_hamming\u003e=4 and d4_min_distance\u003e=4",
+    "rotation_dependent_rule":  "fixed_hamming\u003e=4 and d4_min_distance=2; excluded from that Target set",
+    "ranking":  {
+                    "Near_01":  "highest similarity_score",
+                    "Far_01":  "highest far_priority: structural distance rewarded, low-level mismatch penalized"
+                },
+    "candidate_library":  "Candidates are ranked independently for every Target. A source pattern may appear in multiple sets, but only once within each set.",
+    "target_uniqueness":  "pair_score = 10*d4_min + 2*structural_distance + low_level_distance; triplets maximize their weakest pair first"
+}

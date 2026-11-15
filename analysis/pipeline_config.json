@@ -1,0 +1,9 @@
+{
+  "timing_warning_ms": 5.0,
+  "timing_bad_frame_multiplier": 1.0,
+  "rt_outlier_mad_multiplier": 3.0,
+  "rt_outlier_min_trials": 5,
+  "exclude_timing_bad_from_strict_rt": true,
+  "exclude_rt_outliers_from_strict_rt": true,
+  "press_duration_max_response_window_multiplier": 1.0
+}
